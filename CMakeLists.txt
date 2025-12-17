@@ -10,11 +10,18 @@ target_include_directories(glad PUBLIC external/glad/include)
 
 add_executable(ObjViewer
     src/main.c
+    src/shader.c
+    src/mesh.c
+    src/camera.c
+    src/ObjLoader.c
+    src/Material.c
 )
 
 target_include_directories(ObjViewer PUBLIC
     external/glad/include
     external/glfw/include
+    external/cglm/include
+    external/stb
 )
 
 target_link_libraries(ObjViewer PRIVATE glfw glad)
